@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <link
+                rel="stylesheet"
+                href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+                crossorigin="anonymous"
+            />
+            <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+            <link rel="stylesheet" href="./css/Calculadora.css" />
+
+            <title>Calculadora|CAP</title>
+    </head>
+    <body text="purple">
+        <div id="page" class="d-flex">
+            <div id="sidebar" class= "bg-dark border-right">
+              <div class="col-15 p-5"><img src="./imagens/Retângulos em Roxo Advocacia Logotipo.png" alt="logo weblist" width="70%"></div> 
+              <header><h4 class="cor"><b>CALCULADORA</b></h4></b></header>
+                <nav class="list-group list-group-flush">
+                    <br>
+                    <a 
+                        href="index.html" 
+                        class="palavra list-group-item list-group-item-action bg-dark h5" 
+                        >Agenda</a
+                    >
+                    <br>
+                    <a
+                        href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiZp5a08rPxAhWHlJUCHZiPBrkQFjAAegQIBRAD&url=https%3A%2F%2Fwww.google.com%2Fcalendar&usg=AOvVaw3DL1RYwWlxKdNRzzOWi7iZ"
+                        class="palavra list-group-item list-group-item-action bg-dark h5"
+                        >Calendário</a
+                    >
+                    <br>
+                    <a 
+                        href="Calculadora.html" 
+                        class=" elemento palavra list-group-item list-group-item-action bg-dark h5"
+                        >Calculadora</a
+                    >  
+                    <br>
+                    <a 
+                        href="Perfil.html" 
+                        class="palavra list-group-item list-group-item-action bg-dark h5"
+                        >Perfil</a
+                    >
+                    <br>  
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a 
+                        href="Login.html" 
+                        onclick= "Logout()"
+                        class="palavra list-group-item list-group-item-action bg-dark h5"
+                        >Sair</a
+                    >    
+                </nav>
+            </div>
+            <div id="page-content">
+                <nav
+                  class="navbar navbar-expand-lg navbar-light bg-white border-bottom"
+                >
+                    <img src="./imagens/calculadora.png" alt="logo weblist" width="6%">
+                  <button id="sidebar-toggle" class="btn btn-outline-secondary btn-lg">Menu</button>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto mt-2">
+                      <li class="nav-item active">
+                        <a href="index.html" class="nav-link">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a
+                          id="navbarDropdown"
+                          class="nav-link dropdown-toggle"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          >Meu Usuário</a
+                        >
+                        <div
+                          class="dropdown-menu dropdown-menu-right"
+                          aria-labelledby="navbarDropdown"
+                        >
+                          <a href="perfil.html" class="cor dropdown-item">Perfil</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="Login.html" class="cor dropdown-item" onclick="logout()">Sair</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+                </nav>
+                <br>
+                        <div class="calculadora">
+                            <div class="paleta">
+                              <span class="a" onclick="cambioColor('#009688')"></span>
+                              <span class="b" onclick="cambioColor('#2196F3')"></span>
+                              <span class="c" onclick="cambioColor('#E91E63')"></span>
+                              <span class="d" onclick="cambioColor('#4CAF50')"></span>
+                            </div>
+                            <div onclick="operar('=')" class="igual">
+                              =
+                            </div>
+                            <div class="pantalla">
+                              <div class="ripple">
+                              </div>
+                              <div class="cntGeneral">
+                                <div class="cnt">
+                                <div class="title">Calculadora</div>
+                                <div class="icon">
+                                </div>
+                              </div>
+                              <div class="modulo"> </div>
+                              </div>
+                            </div>
+                            <div class="teclado">
+                              <div><span onclick="operar(7)">7</span></div>
+                              <div><span onclick="operar(8)">8</span></div>
+                              <div><span onclick="operar(9)">9</span></div>
+                              <div><span onclick="operar('/')">÷</span></div>
+                              <div><span onclick="operar(4)">4</span></div>
+                              <div><span onclick="operar(5)">5</span></div>
+                              <div><span onclick="operar(6)">6</span></div>
+                              <div><span onclick="operar('*')">x</span></div>
+                              <div><span onclick="operar(1)">1</span></div>
+                              <div><span onclick="operar(2)">2</span></div>
+                              <div><span onclick="operar(3)">3</span></div>
+                              <div><span onclick="operar('-')">-</span></div>
+                              <div><span onclick="operar('c')"><i class="material-icons">backspace</i></span></div>
+                              <div><span onclick="operar('0')">0</div>
+                              <div><span onclick="operar('.')">.</span></div>
+                              <div><span onclick="operar('+')">+</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calculadora">
+                            <div class="paleta">
+                              <span class="a" onclick="cambioColor('#009688')"></span>
+                              <span class="b" onclick="cambioColor('#2196F3')"></span>
+                              <span class="c" onclick="cambioColor('#E91E63')"></span>
+                              <span class="d" onclick="cambioColor('#4CAF50')"></span>
+                            </div>
+                            <div onclick="operar('=')" class="igual">
+                        
+                            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+                               <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                               <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+                               <script src="./js/Calculadora.js"></script>
+            </div>
+        </div>
+        <script 
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous"
+        ></script>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous"
+        ></script>
+        <script 
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+        
+        <script src="./js/init.js"></script>
+        <script src="./js/login.js"></script>
+        <script src="./js/Perfil.js"></script>
+        <script>
+            $("#sidebar-toggle").click(function (e) {
+                e.preventDefault()
+                $("#page").toggleClass("toggled")
+            })
+        </script>
+
+    </body>
+</html>

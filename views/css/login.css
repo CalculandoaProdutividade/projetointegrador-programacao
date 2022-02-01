@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(94, 10, 150);
+}
+
+.titulo {
+    color: rgb(94, 10, 150);
+}

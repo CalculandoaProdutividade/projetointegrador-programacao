@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Login|CAP</title>
+        
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <script></script>
+        <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+        <link rel="stylesheet" href="./css/login.css" />
+    </head>
+    
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class= "col-12 offeset-1 text-center mt-5 pb-4 text-light">
+                   <h1 class="text-light">  Calculando a Produtividade  </h1>
+                </div>
+                <div class="col-10 offset-1 bg-light shadow mb-5 border border-dark"
+                >
+                <div class="row">
+                    <div 
+                        id="loginLogo"
+                        class="col-6 p-4 bg-light d-flex justify-content-right">
+                            <img src="./imagens/Retângulos em Roxo Advocacia Logotipo.png"alt="Logo Firebase"/>
+                    </div>
+                        <div class="col-6 p-5">
+                            <div id="loginForm">
+                                <h2 class="h2 text-center text-secondary mb-3">
+                                    Faça seu login aqui 
+                                </h2>
+                                
+                                <div class="form-group"></div>
+                                    <img src="./imagens/email.png" alt="teste" width="5%">
+                                    <label for="email" class="titulo">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="email"
+                                        class="form-control"
+                                        placeholder="Digite seu email aqui"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <img src="./imagens/senha 5.png" alt="teste" width="7%">
+                                    <label for="password" class="titulo">Senha</label>
+
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        id="password"
+                                        class="form-control"
+                                        placeholder="Digite sua senha aqui "
+                                    />
+                                </div>
+                                <button 
+                                    type="button" 
+                                    class="btn btn-outline-secondary" 
+                                    onclick="login()">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <script 
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+        crossorigin="anonymous"
+    ></script>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+        crossorigin="anonymous"
+    ></script>
+    <script 
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    
+    <script src="./js/init.js"></script>
+    <script src="./js/login.js"></script>
+
+    </body>
+</html>
